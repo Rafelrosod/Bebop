@@ -12,7 +12,17 @@
 
 <body>
   <h1>Óla Bebop está funcionando corretamente!!!</h1>
-  <script src="" async defer></script>
+  <button id="start-btn">Iniciar Reconhecimento</button>
+  <script type="module">
+    import { startRecognition } from './modules/speech/speech.mjs';
+
+    console.log("Script carregado!");
+
+    document.getElementById('start-btn').addEventListener('click', () => {
+      console.log("Botão clicado!");
+      startRecognition();
+    });
+  </script>
 </body>
 
 </html>
